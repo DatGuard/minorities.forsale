@@ -1,0 +1,15 @@
+h1{
+	font-style: oblique;
+	color: red;
+	text-align: center;
+	background-color: #820d3e;
+	border-style: dotted;
+	border-color: blue;
+	font: 50px Impact, oblique, serif;
+}
+p{
+	color:gray;
+	border-style:dashed;
+	border-color:gray;
+	font:12px Lobster, italic, sans-serif;
+}
