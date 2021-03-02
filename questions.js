@@ -68,7 +68,7 @@ questions = [
     {
         "question": "FREE BALASTIN!!!!!1!",
         "effect": {
-            "basd": -20
+            "basd": -10
         }
     },
     {
