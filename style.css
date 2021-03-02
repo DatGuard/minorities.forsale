@@ -17,7 +17,7 @@ body {
   color: #23286b;
   font-size: 18px;
   line-height: 1.5;
-  background-color: #eeeeee;
+  background-color: white;
 }
 
 img {
@@ -106,8 +106,8 @@ h3 {
     margin: -2px auto;
     cursor: pointer;
 }
-.small_button-2, .small_button_off {
-    background-color: #FFFFFFF;
+.small_button_2, .small_button_off {
+    background-color: white;
     font-family: 'Montserrat', sans-serif;
     border: none;
     border-radius: 8pt;
