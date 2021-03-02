@@ -106,6 +106,22 @@ h3 {
     margin: -2px auto;
     cursor: pointer;
 }
+.small_button-2, .small_button_off {
+    background-color: #FFFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-radius: 8pt;
+    color: white;
+    padding: 8pt;
+    width: 10%;
+    min-width: 100pt;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 18pt;
+    margin: -2px auto;
+    cursor: pointer;
+}
 .small_button_off {
     background-color: #ddd;
     color: #888;
