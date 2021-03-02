@@ -1,0 +1,95 @@
+<head>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
+<link href='style.css' rel='stylesheet' type='text/css'>
+<title>Based Meter</title>
+<link rel="icon" type="x-icon" href="nigger/icon.png">
+<link rel="shortcut icon" type="x-icon" href="nigger/icon.png">
+<meta charset="utf-8">
+</head>
+<body style="background-color: #e1e4e8;">
+<script type="application/javascript"
+        src="questions.js">
+</script>
+<img src="https://cdn.discordapp.com/attachments/816328843094261760/816342782255300668/bm.png">
+<hr>
+<p style="text-align:center;" id="question-number">Loading...</p>
+<h4 style="text-align: center;" class="question" id="question-text"></h4>
+<button class="button" onclick="next_question( 1.0)" style="background-color: #FF0000;"><b>Agree</b></button> <br>
+<button class="button" onclick="next_question( 0.0)" style="background-color: #bbbbbb;"><b>Neutral</b></button> <br>
+<button class="button" onclick="next_question(-1.0)" style="background-color: #01CCFF;"><b>Disagree</b></button> <br>
+<button class="small_button" onclick="prev_question()" id="back_button">Back</button>
+<button class="small_button_off" id="back_button_off">Back</button><br>
+<button class="small_button" id="back_button"><a href=index.html>Home</a></button>
+
+
+<!-- Website visit statistics - no personal information is collected! -->
+<script type="text/javascript">
+var sc_project=11325211;
+var sc_invisible=1;
+var sc_security="fd9f0659";
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="web stats"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11325211/0/fd9f0659/1/" alt="web
+stats"></a></div></noscript>
+
+<!-- JavaScript for the test itself -->
+<script>
+    var max_basd; // Max possible scores
+    max_basd = 0;
+    var basd; // User's scores
+    basd = 0;
+    var qn = 0; // Question number
+    var prev_answer = null;
+    init_question();
+    for (var i = 0; i < questions.length; i++) {
+        max_basd += Math.abs(questions[i].effect.econ)
+    }
+    function init_question() {
+        document.getElementById("question-text").innerHTML = questions[qn].question;
+        document.getElementById("question-number").innerHTML = "Question " + (qn + 1) + " of " + (questions.length);
+        if (prev_answer == null) {
+            document.getElementById("back_button").style.display = 'none';
+            document.getElementById("back_button_off").style.display = 'block';
+        } else {
+            document.getElementById("back_button").style.display = 'block';
+            document.getElementById("back_button_off").style.display = 'none';
+        }
+
+    }
+
+    function next_question(mult) {
+        basd += mult*questions[qn].effect.basd
+        qn++;
+        prev_answer = mult;
+        if (qn < questions.length) {
+            init_question();
+        } else {
+            results();
+        }
+    }
+    function prev_question() {
+        if (prev_answer == null) {
+            return;
+        }
+        qn--;
+        basd -= prev_answer * questions[qn].effect.basd;
+        prev_answer = null;
+        init_question();
+
+    }
+    function calc_score(score,max) {
+        return (100*(max+score)/(2*max)).toFixed(1)
+    }
+    function results() {
+        location.href = `results.html`
+            + `?b=${calc_score(basd,max_basd)}`
+    }
+</script>
+</body>
