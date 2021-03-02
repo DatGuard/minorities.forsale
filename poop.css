@@ -139,13 +139,13 @@ div.text-wrapper {
     color: #222222;
     display: inline-block;
 }
-div.equality {
-    background-color: #f44336;
+div.based {
+    background-color: #FF0000;
     text-align: left;
     border-right-style: solid;
 }
-div.wealth {
-    background-color: #00897b;
+div.cringe {
+    background-color: #01CCFF;
     text-align: right;
     border-left-style: solid;
 }
