@@ -168,13 +168,13 @@ questions = [
         }
     },
     {
-        "question": "queen gergin",
+        "question": "אח שלי",
         "effect": {
             "econ": -10
         }
     },
     {
-        "question": "lenafd dalrymple hamlit on",
+        "question": "how you become postinor from amongus",
         "effect": {
             "econ": 10
         }
@@ -186,7 +186,7 @@ questions = [
         }
     },
     {
-        "question": "shalom, i am here to take your foreskin (virginity)",
+        "question": "so much high no satla",
         "effect": {
             "econ": 10
         }
